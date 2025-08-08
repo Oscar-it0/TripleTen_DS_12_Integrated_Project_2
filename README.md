@@ -1,42 +1,59 @@
-#  Sprint 12 - Proyecto de Recuperación de Oro
+# Sprint 12 - Module 2 Project: Gold Recovery from Gold Ore - Zyfra
 
-Este proyecto tiene como objetivo construir un modelo de machine learning para predecir la recuperación de oro en una planta de procesamiento. Utilizamos datos reales de producción, que incluyen parámetros físicos y químicos medidos en diferentes etapas del proceso.
+This project aims to build a machine learning model to predict gold recovery in a processing plant. We use real production data, including physical and chemical parameters measured at different stages of the process.
 
-##  Archivos de Datos
+---
 
-Los datos se encuentran en tres archivos CSV:
-- `gold_recovery_train.csv`: conjunto de entrenamiento.
-- `gold_recovery_test.csv`: conjunto de prueba (sin objetivos).
-- `gold_recovery_full.csv`: conjunto completo con todas las características.
+## Datasets
 
-> Los datos están indexados por fecha y hora (`date`). Los parámetros cercanos en el tiempo suelen ser similares.
+The data is contained in three CSV files:
+- `gold_recovery_train.csv`: training set.
+- `gold_recovery_test.csv`: test set (without targets).
+- `gold_recovery_full.csv`: complete set with all features.
 
-##  Instrucciones del Proyecto
+> The data is indexed by date and time (`date`). Parameters close in time are usually similar.
 
-### 1. Preparación de los Datos
--  Cargar y explorar los archivos desde:
-  `/datasets/gold_recovery_train.csv`
-  `/datasets/gold_recovery_test.csv`
-  `/datasets/gold_recovery_full.csv`
--  Verificar el cálculo de `rougher.output.recovery` y comparar con los valores reales usando el Error Absoluto Medio (EAM).
--  Identificar las características ausentes en el conjunto de prueba y analizar su tipo.
--  Realizar el preprocesamiento necesario (valores nulos, tipos de datos, etc.).
+---
 
-### 2. Análisis Exploratorio
--  Analizar cómo cambian las concentraciones de **Au**, **Ag** y **Pb** en cada etapa del proceso.
--  Comparar la distribución del tamaño de partículas entre los conjuntos de entrenamiento y prueba.
--  Evaluar la suma total de concentraciones en cada etapa para detectar valores anómalos y decidir si deben eliminarse.
+## Project Instructions
 
-### 3. Construcción del Modelo
--  Implementar una función para calcular el **sMAPE** (Symmetric Mean Absolute Percentage Error).
--  Entrenar múltiples modelos y evaluarlos con validación cruzada.
--  Seleccionar el mejor modelo y probarlo con el conjunto de prueba.
+### 1. Data Preparation
+- Load and explore the files from:
+`gold_recovery_train.csv`
+`gold_recovery_test.csv`
+`gold_recovery_full.csv`
+- Verify the calculation of `rougher.output.recovery` and compare with actual values using the Mean Absolute Error (MAE).
+- Identify missing features in the test set and analyze their type.
+- Perform the necessary preprocessing (null values, data types, etc.).
 
-##  Criterios de Evaluación
-Los revisores evaluarán:
-- Calidad del análisis y preparación de datos.
-- Variedad y rendimiento de los modelos desarrollados.
-- Correcta validación y evaluación del modelo.
-- Claridad en la explicación de cada paso.
-- Limpieza y organización del código.
-- Conclusiones obtenidas.
+### 2. Exploratory Analysis
+- Analyze how the concentrations of **Au**, **Ag**, and **Pb** change at each stage of the process.
+- Compare the particle size distribution between the training and test sets.
+- Evaluate the total sum of concentrations at each stage to detect anomalous values and decide whether they should be removed.
+
+### 3. Model Construction
+- Implement a function to calculate the **sMAPE** (Symmetric Mean Absolute Percentage Error).
+- Train multiple models and evaluate them with cross-validation.
+- Select the best model and test it with the test set.
+
+---
+
+## Checklist
+
+- Quality of analysis and data preparation.
+- Variety and performance of the models developed.
+- Correct validation and evaluation of the model.
+- Clarity in the explanation of each step.
+- Cleanliness and organization of the code.
+- Conclusions obtained.
+
+---
+
+## Tools
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Pyplot
+- Sklearn
